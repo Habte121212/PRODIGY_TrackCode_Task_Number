@@ -1,10 +1,10 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { AuthProvider } from '../context/AuthContex'
-import ProtectedRoute from '../context/ProtectedRoute'
-import Login from '../pages/login/Login'
-import Register from '../pages/register/Register'
-import Home from '../components/Home'
+import { AuthProvider } from './context/AuthContex'
+import ProtectedRoute from './context/ProtectedRoute'
+import Login from './pages/login/Login'
+import Register from './pages/register/Register'
+import Home from './components/home'
 
 function App() {
   return (

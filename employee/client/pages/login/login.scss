@@ -1,0 +1,200 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+
+  .containearLogin {
+    background: #fff;
+    padding: 40px 32px 32px 32px;
+    border-radius: 19px;
+    box-shadow: 0 6px 32px rgba(0, 0, 0, 0.1), 0 1.5px 6px rgba(0, 0, 0, 0.08);
+    margin-top: 48px;
+    min-width: 340px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #2d3a4b;
+    letter-spacing: 0.5px;
+  }
+
+  .loginForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    margin-bottom: 18px;
+  }
+
+  .login__label {
+    font-size: 16px;
+    color: #3b4a5a;
+    font-weight: 500;
+    margin-bottom: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .login__input {
+    padding: 11px 16px;
+    border: 1.5px solid #e3eaff;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.2s;
+    outline: none;
+    margin-top: 1px;
+    &:hover {
+      border: 1px solid #6c63a1;
+    }
+    &:focus {
+      border: 2px solid #6c63ff;
+      background: #fff;
+    }
+  }
+
+  .forget-password {
+    text-align: right;
+    margin-bottom: 3px;
+    width: 100%;
+    a {
+      color: #48c6ef;
+      font-size: 15px;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+        color: #6c63ff;
+      }
+    }
+  }
+
+  .register__login-link {
+    text-align: center;
+    font-size: 16px;
+    color: #6c63ff;
+    margin-top: 3px;
+    a {
+      color: #3b4a5a;
+      text-decoration: underline;
+      font-weight: 500;
+      margin-left: 3px;
+      &:hover {
+        color: #6c63ff;
+      }
+    }
+  }
+  .login-btn {
+    background: linear-gradient(90deg, #6c63ff 0%, #48c6ef 100%);
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    padding: 13px 0;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(76, 110, 245, 0.08);
+    margin-top: 10px;
+    &:hover,
+    &:focus {
+      background: linear-gradient(90deg, #48c6ef 0%, #6c63ff 100%);
+      box-shadow: 0 4px 16px rgba(76, 110, 245, 0.13);
+    }
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(44, 62, 80, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  .modal {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+    padding: 32px 28px 24px 28px;
+    min-width: 320px;
+    max-width: 90vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    animation: fadeIn 0.2s;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #6c63ff;
+    cursor: pointer;
+    transition: color 0.2s;
+    &:hover {
+      color: #48c6ef;
+    }
+  }
+  .modal h3 {
+    margin-bottom: 18px;
+    color: #2d3a4b;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  .modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .modal-form label {
+    font-size: 1rem;
+    color: #3b4a5a;
+    font-weight: 500;
+    margin-bottom: 3px;
+  }
+  .modal-message {
+    color: #2d3a4b;
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 18px 0 6px 0;
+  }
+  .link-btn {
+    background: none;
+    border: none;
+    color: #48c6ef;
+    font-size: 15px;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    &:hover {
+      color: #6c63ff;
+      text-decoration: underline;
+    }
+  }
+}
