@@ -52,6 +52,14 @@ app.use('/server/auth', gmailVerifyRoutes)
 const restPasswordRoutes = require('./routes/resetPassword')
 app.use('/server/auth', restPasswordRoutes)
 
+// manager routes
+const managerRoutes = require('./routes/manager')
+app.use('/server/manager', managerRoutes)
+
+// employee routes
+const employeeRoutes = require('./routes/employee')
+app.use('/server/employee', employeeRoutes)
+
 //port
 const port = process.env.PORT || 8500
 app.listen(port, () => {
